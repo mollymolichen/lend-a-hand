@@ -13,7 +13,7 @@
   "permissions": [
     "http://*.google.com/", 
     "https://*.google.com/",
-    "http://*facebook.com/",
+    "http://*.facebook.com/",
     "https://*.facebook.com/",
     "activeTab",
     "storage",
@@ -27,7 +27,7 @@
   "content_scripts": [
     {
       "matches": [
-        "http://*facebook.com/",
+        "http://*.facebook.com/",
         "https://*.facebook.com/"
       ]
     }]
