@@ -26,6 +26,8 @@
   }, 
   "content_scripts": [
     {
+      "css": [],
+      "js": ["contentScript.js", "eventPage.js"],
       "matches": [
         "http://facebook.com/*",
         "https://facebook.com/*"
