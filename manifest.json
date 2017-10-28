@@ -8,7 +8,7 @@
   }*/,
   "background": {
     "persistent": false,
-    "scripts": []
+    "scripts": ["background.html"]
   },
   "permissions": [
     "http://*.google.com/", 
