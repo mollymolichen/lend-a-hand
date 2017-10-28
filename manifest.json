@@ -1,5 +1,5 @@
 {
-  "name": "Sentry",   // random name for now
+  "name": "Mental Health Extension",   // random name for now
   "manifest_version": 2,
   "version" : "1.0",
   "description": "Redirects Facebook users that post triggering content or content depicting self-harm to help."
@@ -17,7 +17,7 @@
     "storage"
   ],
   "page_action": {
-    "default_title": "Social Media Sentry",
+    "default_title": "Mental Health Extension",
     "default_icon": "icon.png",
     "default_popup": "background.html"
   }
