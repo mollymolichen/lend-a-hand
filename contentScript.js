@@ -2,6 +2,7 @@
 
 var elements = document.querySelectorAll('[data-text="true"]');
 var post = elements[0].innerHTML;
+var res = post.split(" ");
 
 var words = new Set();
 
@@ -11,6 +12,10 @@ words.add("sucks");
 
 console.log(words);
 
-if (words.has(post)){
-	alert("Don't suicide");
+
+for (i = 0; i < res.length; i++) { 
+    if (words.has(res[i])){
+		alert("Don't suicide");
+	}
 }
+
