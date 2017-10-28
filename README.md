@@ -1,7 +1,7 @@
 # mental-health-extension
 
-Molly - add functionality to base Chrome Extension, scope out mental health resources, create sketchup of project design
+Molly - add functionality to base Chrome Extension, scope out mental health resources, create sketchup of project design, work on 
 
-Fangge - research NLP and text recognition classification (+, - text analysis sentiment)
+Fangge - web scrape user text from keyboard (log keystrokes), research NLP and text recognition classification (+, - text analysis sentiment)
 
-Prath - 
+Prath - working on linking Microsoft Text Recognition API with user text pulled from Facebook

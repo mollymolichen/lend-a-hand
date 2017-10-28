@@ -13,12 +13,22 @@
   "permissions": [
     "http://*.google.com/", 
     "https://*.google.com/",
+    "http://*facebook.com/",
+    "https://*.facebook.com/",
     "activeTab",
-    "storage"
+    "storage",
+    "tabs"
   ],
   "page_action": {
     "default_title": "Mental Health Extension",
     "default_icon": "icon.png",
     "default_popup": "background.html"
-  }
+  }, 
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*facebook.com/",
+        "https://*.facebook.com/"
+      ]
+    }]
 }
