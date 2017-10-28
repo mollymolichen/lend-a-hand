@@ -8,7 +8,7 @@
   }*/,
   "background": {
     "persistent": false,
-    "scripts": ["eventPage.js"]
+    "scripts": []
   },
   "permissions": [
     "http://*.google.com/", 
