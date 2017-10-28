@@ -7,8 +7,8 @@
     "128:" "icon_128.png"
   }*/,
   "background": {
-    "persistent": false,
-    "scripts": ["contentScript.js"]
+    "scripts": ["background.js"],
+    "persistent": false
   },
   "permissions": [
     "http://*.google.com/", 
@@ -22,7 +22,7 @@
   "page_action": {
     "default_title": "Mental Health Extension",
     "default_icon": "icon.png",
-    "default_popup": "background.html"
+    "default_popup": "background.js"
   }, 
   "content_scripts": [
     {
