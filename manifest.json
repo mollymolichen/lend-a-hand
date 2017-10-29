@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
-    "name": "fwd:",
-    "description": "Forward online positivity. Redirect users dealing with mental health issues and suicidal ideation on social media with a redirect to help.",
+    "name": "lend",
+    "description": "Lend a helping hand on social media. Redirect users dealing with mental health issues and suicidal ideation on social media to help.",
     "version": "1.0",
     "content_scripts": [
         {
@@ -15,15 +15,15 @@
     ],
     "permissions": [
         "activeTab"
-    ]
-    /*"browser_action": {
+    ],
+    "browser_action": {
         "default_title": "fwd:",
         "default_icon": "icon.png"
-    }*/
-    /*"background": {
+    },
+    "background": {
         "scripts": [
             "background.js"
         ],
         "persistent": false
-    }*/
+    }
 }
