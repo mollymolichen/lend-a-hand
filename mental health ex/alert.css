@@ -1,0 +1,12 @@
+.cancelButton {
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.continueButton {
+    text-align: center;
+    font-size: small;
+    font-style: italic;
+}
