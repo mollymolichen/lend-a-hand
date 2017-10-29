@@ -1,35 +1,29 @@
 {
-  "name": "Mental Health Extension",   // random name for now
-  "manifest_version": 2,
-  "version" : "1.0",
-  "description": "Redirects Facebook users that post triggering content or content depicting self-harm to help."
-  /*"icons:" {
-    "128:" "icon_128.png"
-  }*/,
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
-  "permissions": [
-    "http://*.google.com/", 
-    "https://*.google.com/",
-    "http://*.facebook.com/",
-    "https://*.facebook.com/",
-    "activeTab",
-    "storage",
-    "tabs"
-  ],
-  "browser_action": {
-    "default_title": "Mental Health Extension",
-    "default_icon": "icon.png"
-  },
-  "content_scripts": [
-    {
-      "css": [],
-      "js": ["contentScript.js", "eventPage.js"],
-      "matches": [
-        "http://facebook.com/*",
-        "https://facebook.com/*"
-      ]
-    }]
+    "manifest_version": 2,
+    "name": "fwd:",
+    "description": "Forward online positivity. Redirect users dealing with mental health issues and suicidal ideation on social media with a redirect to help.",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "activeTab"
+    ]
+    /*"browser_action": {
+        "default_title": "fwd:",
+        "default_icon": "icon.png"
+    }*/
+    /*"background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    }*/
 }
