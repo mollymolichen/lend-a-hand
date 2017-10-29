@@ -54,42 +54,31 @@ function performSuicidePrevention(){
 function pastThreshold(){
     // given a JSON output from .py, calculate whether sentiment < threshold
     // if so, output popup
+    var sentimentVal; //value returned 
+
 }
 
 // JQuery Selector Format
-    // pass file to sentimentRead.py
-    // fileRead(fileName)
-$('input').on('input',function(e) {
+// pass file to sentimentRead.py
+// fileRead(fileName)
+// $('input').on('input',function(e) {
     // get link to input.txt
-    /*$(this)[0].addEventListener('click', function(){        // questionable
-        var link = document.createElement('a');
-        link.setAttribute('download', 'user_input.txt');
-        link.href = makeTextFile($('textarea')[0].value);
-        document.body.appendChild(link);
-
-        // wait for link to be added to document
-        window.requestAnimationFrame(function(){
-            var event = new MouseEvent('click');
-            link.dispatchEvent(event);
-            document.body.removeChild(link);
-        })
-    }, false);*/
     var textElements = document.querySelectorAll('[data-text="true"]')[0];
     var userInput = elements.innerHTML;
-
-    //@app.route("sentimentRead.py")
-    //def returnFile():
-
-
-    $.ajax({
-        type: "POST",
-        url: "sentimentRead.py",
-        data: {
-            param: userInput
+    for (var i = 0, i < flaggedExpressions.length; i++){
+        if (userInput.includes(flaggedExpressions[i])){
+            chrome.runtime.sendMessage({
+                method: 'GET',
+                action: 'xhttp',
+                url: 'https://herokuapp.com'                    // URL for python server
+            }, function(responseText){                          // get threshold from py
+                var response = JSON.parse(responseText);
+                var textThreshold = Object.keys(response)[0];
+                var data = response[textThreshold];
+                console.log(textThreshold + "The user input returned threshold: " + data);
+            })
         }
-    }).done(function(arg){
-        // do something
-    });
+    }
 
     // see if input contains any flagged expressions
     for (var i=0, len = flaggedExpressions.length; i < len; i++) {
@@ -100,7 +89,7 @@ $('input').on('input',function(e) {
             performSuicidePrevention();
         }
     }
-});
+// });
 
 $('textarea').on('input',function(e) {
     for (var i=0, len = flaggedExpressions.length; i < len; i++) {

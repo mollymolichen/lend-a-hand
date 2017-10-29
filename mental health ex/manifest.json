@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
 
-    "name": "HD Chrome Extension Example",
-    "description": "Example extension for Hack Duke project",
+    "name": "fwd:",
+    "description": "Forward online positivity. Redirect users dealing with mental health issues and suicidal ideation on social media with a redirect to help.",
     "version": "1.0",
     "content_scripts": [
         {
